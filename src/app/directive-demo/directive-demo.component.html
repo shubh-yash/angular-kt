@@ -1,0 +1,23 @@
+
+<input type="radio" value="True" name="r1" (click)="myFunc(true)">True 
+<input type="radio" value="False" name="r1" (click)="myFunc(false)">False 
+
+<div *ngIf="condition1 else condition2">
+    Hello, this is from if block
+</div>
+<ng-template #condition2>
+    <div>Hello, this is from else block</div>
+    
+</ng-template>
+
+<h3>ng style example</h3>
+<ul *ngFor="let p of people">
+    <li [ngStyle]="{'color': getColor(p.country)}">
+        {{p.name}}::{{p.country}}
+    </li>
+</ul>
+
+
+<br>
+<h2>Property Binding</h2>
+<span [innerText]="myName"></span>

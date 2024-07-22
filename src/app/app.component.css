@@ -1,0 +1,6 @@
+#innerDiv {
+    max-height: 500px;
+    overflow-y: auto;
+    max-width: 80%;
+    margin: 50px 50px
+}

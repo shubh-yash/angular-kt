@@ -1,0 +1,35 @@
+<h4>Name:{{name | lowercase}}</h4>
+<h4>Name:{{name | uppercase | slice:1:4}}</h4>
+<h4>DOB:{{dob | date:"shortDate"}}</h4>
+<h4>Marks:{{marks | percent:'2.2-3'}}</h4>
+<h4>Number Pipe:{{count|number}}</h4>
+<h4>Decimal Pipe:{{decValue|number:'2.2-4'}}</h4>
+<h4>Currency Pipe:{{price|currency:'BRL'}}</h4>
+<h4>Date Pipe:{{today|date:'dd-MM-yyyy'}}</h4>
+<h4>JSON Pipe:{{myObj | json}}</h4>
+<h4>Percent Pipe:{{0.6567 | percent:'2.2-2'}}</h4>
+<h4>Slice Pipe:{{fruitsArr | slice:0:3}}</h4>
+
+<div>
+    {{employees|json}}
+</div>
+
+
+<table class="table table-bordered table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <th scope="row">{{emp.id}}</th>
+        <td>{{emp.name | gender:emp.gender}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.gender}}</td>
+      </tr>
+    </tbody>
+  </table>
