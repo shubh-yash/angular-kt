@@ -1,0 +1,5 @@
+<h2>Child component</h2>
+Data from App component: {{parentData}}
+
+<br>
+Data sent from child component:<input type="text" #childData (change)="sendChildData(childData.value)">
